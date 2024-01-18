@@ -1,7 +1,9 @@
+from dotenv import load_dotenv
 from openai import OpenAI
 class OpenAILLM():
 
     def __init__(self) -> None:
+        load_dotenv()
         self.client = OpenAI()
 
     def get_embedding(self, text, model="text-embedding-ada-002"):
